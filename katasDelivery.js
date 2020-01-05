@@ -119,7 +119,70 @@ return numberDivisible
 
 divisibleBy([1, 2, 3, 4, 5, 6], 2);
 
-// 8. 
+// 8. List Filtering
+
+function filter_list(l) {
+  let number = [];
+
+  for (let i = 0; i < l.length; i++){
+    if (typeof l[i] === "number"){
+      number.push(l[i]);
+    }
+  }
+  return number;
+}
+
+filter_list([1,2,'a','b']);
+
+// 9. Credit Card Mask 
+
+function maskify(cc) {
+  let maskifyResult = "";
+  for (i = 0; i < cc.length; i++) {
+    if (i < cc.length - 4) {
+      maskifyResult += '#';
+    } else {
+      maskifyResult += cc[i];
+    }
+  }
+  return maskifyResult;
+}
+
+maskify("4556364607935616");
+
+
+// 10. Flatten
+
+var flatten = function(array){
+  let flattened = [];
+
+  for (let i = 0; i < array.length; i++) {
+    if (Array.isArray(array[i])){
+      flattened = flattened.concat(flatten(array[i]));
+    } else {
+      flattened.push(array[i]);
+    }
+  }
+  return flattened
+}
+
+flatten([1,2,3]);
+
+// 11. Square Every Digit 
+
+function squareDigits(num){
+  let numToString = num.toString();
+  let stringResult = "";
+  for (i = 0; i < numToString.length; i++) {
+    stringResult += numToString[i] ** 2;
+  }
+  return parseInt(stringResult, 10);
+}
+
+squareDigits(9119);
+
+
+
 
 
 
