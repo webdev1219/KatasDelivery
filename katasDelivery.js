@@ -17,3 +17,15 @@ function switcher(x){
   }
   
   switcher(['24', '12', '23', '22', '4', '26', '9', '8']);
+
+  // Remove First and Last Character 
+
+  function removeChar(str) {
+    let firstLetter = str.substr(1);
+    let finalResult = firstLetter.slice(0,-1);
+    return finalResult;
+  }
+  
+  remove("eloquent");
+
+  
