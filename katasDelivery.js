@@ -1,4 +1,4 @@
-// Numbers to letters
+// 1. Numbers to letters
 
 function switcher(x){
     
@@ -18,7 +18,7 @@ function switcher(x){
   
   switcher(['24', '12', '23', '22', '4', '26', '9', '8']);
 
-  // Remove First and Last Character 
+  // 2. Remove First and Last Character 
 
   function removeChar(str) {
     let firstLetter = str.substr(1);
@@ -29,7 +29,7 @@ function switcher(x){
   remove("eloquent");
 
 
-  // Vowel Count 
+  // 3. Vowel Count 
 
   function getCount(str) {
     let vowelsCount = 0;
@@ -43,5 +43,51 @@ function switcher(x){
   
   getCount("abracadabra");
 
-  
+
+// 4. Sum Mixed Array
+
+  function sumMix(x){
+    let newArr = [];
+    for (let i = 0; i < x.length; i++) { 
+      newArr.push(parseInt(x[i], 10));
+    }
+    let result = 0;
+    for (let k = 0; k <newArr.length; k++){
+      result += newArr[k];
+    }
+    return result;
+  }
+
+ // 5. Count of positives / sum of negatives
+
+ function countPositivesSumNegatives (input){
+  let positiveNum = [];
+  let negativeNum = [];
+  let empty = []
+
+  if (input === null || input.length < 1){
+    return empty;
+  }
+
+  for (let i = 0; i < input.length; i++){
+    if (input[i] > 0) {
+      positiveNum.push(input[i]);
+    } else {
+      negativeNum.push(input[i]);
+    }
+  }
+  let countPositives = positiveNum.length;
+  let sumNegatives = 0;
+  for (let k = 0; k < negativeNum.length; k++){
+    sumNegatives = sumNegatives + negativeNum[k];
+  }
+
+  let finalResult = [];
+  finalResult.push (countPositives, sumNegatives);
+  return finalResult;
+}
+
+countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]);
+ 
+ 
 
