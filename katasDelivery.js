@@ -88,6 +88,23 @@ function switcher(x){
 }
 
 countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]);
- 
+
+// 6. Get the mean of an array
+
+function getAverage(marks){
+  let sumMarks = 0;
+  for (let i = 0; i < marks.length; i++){
+    sumMarks += marks[i]; 
+  }
+  let numberMarks = marks.length;
+  let averageMarks = sumMarks / numberMarks;
+  return averageMarks;
+}
+
+getAverage([2,2,2,2])
+
+
+
+
  
 
