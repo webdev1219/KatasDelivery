@@ -98,10 +98,30 @@ function getAverage(marks){
   }
   let numberMarks = marks.length;
   let averageMarks = sumMarks / numberMarks;
+  averageMarks = Math.floor(averageMarks);
   return averageMarks;
 }
 
-getAverage([2,2,2,2])
+getAverage([2,2,2,2]);
+
+// 7. Find numbers which are divisible by given number
+
+function divisibleBy(numbers, divisor){
+  let numberDivisible = [];
+  
+  for (let i = 0; i < numbers.length; i++){
+    if (numbers[i] % divisor === 0) {
+      numberDivisible.push(numbers[i]);
+    }
+  }
+return numberDivisible
+}
+
+divisibleBy([1, 2, 3, 4, 5, 6], 2);
+
+// 8. 
+
+
 
 
 
