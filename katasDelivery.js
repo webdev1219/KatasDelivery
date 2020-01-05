@@ -1,26 +1,25 @@
-# KatasDelivery
+// 1. Numbers to letters
 
-## 1. Numbers to Letters
-
-```javascript
 function switcher(x){
-  const objectWords = {1:'z',2:'y',3:'x',4:'w',5:'v',6:'u',7:'t',8:'s',9:'r',10:'q',
-11:'p',12:'o',13:'n',14:'m',15:'l',16:'k',17:'j',18:'i',19:'h',20:'g',
-21:'f',22:'e',23:'d',24:'c',25:'b',26:'a',27:'!',28:'?',29:' '}
+    
+  const objectWords = {
+    1:'z', 2:'y',3:'x',4:'w',5:'v',6:'u',7:'t',
+    8:'s',9:'r',10:'q', 11:'p',12:'o',13:'n',
+    14:'m',15:'l',16:'k',17:'j',18:'i',19:'h',20:'g', 
+    21:'f',22:'e',23:'d',24:'c',25:'b',26:'a',27:'!',
+    28:'?',29:' '}
+  
+  const newArray = x.map(function(y) {
+    return objectWords[y * 1]; 
+  });
+  
+  return newArray.join('');
+  }
+  
+  switcher(['24', '12', '23', '22', '4', '26', '9', '8']);
 
-const toArray = x.map(function (y) {
-  return objectWords[y * 1]; 
-});
+  // 2. Remove First and Last Character 
 
-return toArray.join('');
-}
-
-switcher(['24', '12', '23', '22', '4', '26', '9', '8']);
-```
-
-## 2. Remove First and Last Character
-
-```javascript
   function removeChar(str) {
     let firstLetter = str.substr(1);
     let finalResult = firstLetter.slice(0,-1);
@@ -28,11 +27,10 @@ switcher(['24', '12', '23', '22', '4', '26', '9', '8']);
   }
   
   remove("eloquent");
-```
 
-## 3. Vowel Count 
 
-```javascript
+  // 3. Vowel Count 
+
   function getCount(str) {
     let vowelsCount = 0;
     for (let i = 0; i < str.length; i++){
@@ -44,11 +42,10 @@ switcher(['24', '12', '23', '22', '4', '26', '9', '8']);
   }
   
   getCount("abracadabra");
-```
 
-## 4. Sum Mixed Array
 
-```javascript
+// 4. Sum Mixed Array
+
   function sumMix(x){
     let newArr = [];
     for (let i = 0; i < x.length; i++) { 
@@ -60,11 +57,9 @@ switcher(['24', '12', '23', '22', '4', '26', '9', '8']);
     }
     return result;
   }
-```
 
-## 5. Count of positives / sum of negatives
+ // 5. Count of positives / sum of negatives
 
-```javascript
  function countPositivesSumNegatives (input){
   let positiveNum = [];
   let negativeNum = [];
@@ -91,11 +86,11 @@ switcher(['24', '12', '23', '22', '4', '26', '9', '8']);
   finalResult.push (countPositives, sumNegatives);
   return finalResult;
 }
-```
 
-## 6. Get the mean of an array
+countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]);
 
-```javascript
+// 6. Get the mean of an array
+
 function getAverage(marks){
   let sumMarks = 0;
   for (let i = 0; i < marks.length; i++){
@@ -108,11 +103,9 @@ function getAverage(marks){
 }
 
 getAverage([2,2,2,2]);
-```
 
-## 7. Find numbers which are divisible by given number
+// 7. Find numbers which are divisible by given number
 
-```javascript
 function divisibleBy(numbers, divisor){
   let numberDivisible = [];
   
@@ -125,11 +118,9 @@ return numberDivisible
 }
 
 divisibleBy([1, 2, 3, 4, 5, 6], 2);
-```
 
-## 8. List Filtering
+// 8. List Filtering
 
-```javascript
 function filter_list(l) {
   let number = [];
 
@@ -142,11 +133,9 @@ function filter_list(l) {
 }
 
 filter_list([1,2,'a','b']);
-```
 
-## 9. Credit Card Mask 
+// 9. Credit Card Mask 
 
-```javascript
 function maskify(cc) {
   let maskifyResult = "";
   for (i = 0; i < cc.length; i++) {
@@ -160,11 +149,10 @@ function maskify(cc) {
 }
 
 maskify("4556364607935616");
-```
 
-## 10. Flatten
 
-```javascript
+// 10. Flatten
+
 var flatten = function(array){
   let flattened = [];
 
@@ -179,10 +167,9 @@ var flatten = function(array){
 }
 
 flatten([1,2,3]);
-```
-## 11. Square Every Digit 
 
-```javascript
+// 11. Square Every Digit 
+
 function squareDigits(num){
   let numToString = num.toString();
   let stringResult = "";
@@ -193,11 +180,14 @@ function squareDigits(num){
 }
 
 squareDigits(9119);
-```
 
 
 
 
 
 
+
+
+
+ 
 
